@@ -1,0 +1,13 @@
+******************************************************* 
+           StartTime : 06122020_235406
+                Host : dennisk02-mac 
+         Working Dir : /Users/dennisk/Documents/Demo/multipass-demo 
+              Script : ./K3s-ha-build.sh
+            Log file : ./K3s-ha-build.sh_06122020_235406.log 
+******************************************************* 
+ 
+-> Executing check_cluster_exists...
+...Checking if hademo already exists...
+hademo already exists. You have done this task before; you just don't remember...
+                                                                                Stopping hademo1  /-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|                                                                                                                                                                 Stopping hademo2  /-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-                                                                                                                                                                 Stopping hademo3  /-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\                                                                                                                                                                 Stopping hademo4  /-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/                                                                                 **** Error inside function check_cluster_exists ..
+Error occurred, Error Code: 99, please check ./K3s-ha-build.sh_06122020_235406.log for detail logs!!!

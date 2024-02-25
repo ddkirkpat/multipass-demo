@@ -1,0 +1,777 @@
+******************************************************* 
+           StartTime : 06122020_232655
+                Host : dennisk02-mac 
+         Working Dir : /Users/dennisk/Documents/Demo/multipass-demo 
+              Script : ./K3s-ha-build.sh
+            Log file : ./K3s-ha-build.sh_06122020_232655.log 
+******************************************************* 
+ 
+-> Executing check_cluster_exists...
+...Checking if hademo already exists...
+hademo does not exist. Proceeding...
+-> Executing build_nodes...
+Building hademo nodes...
+Deploying hademo1...
+                                                                                                                                                                Creating hademo1  /-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|                                                                                                                                                                 Configuring hademo1  /                                                                                                                                                                 Starting hademo1  /-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/                                                                                                                                                                 Waiting for initialization to complete  /-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/                                                                                 Launched: hademo1
+                                                                                Deploying hademo2...
+                                                                                                                                                                Creating hademo2  /                                                                                                                                                                 Configuring hademo2  /                                                                                                                                                                 Starting hademo2  /-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|                                                                                                                                                                 Waiting for initialization to complete  /-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|                                                                                 Launched: hademo2
+                                                                                Deploying hademo3...
+                                                                                                                                                                Creating hademo3  /                                                                                                                                                                 Configuring hademo3  /                                                                                                                                                                 Starting hademo3  /-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\                                                                                                                                                                 Waiting for initialization to complete  /-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|                                                                                 Launched: hademo3
+                                                                                Deploying hademo4...
+                                                                                                                                                                Creating hademo4  /                                                                                                                                                                 Configuring hademo4  /                                                                                                                                                                 Starting hademo4  /-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\                                                                                                                                                                 Waiting for initialization to complete  /-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\                                                                                 Launched: hademo4
+                                                                                Name                    State             IPv4             Image
+hademo1                 Running           192.168.64.16    Ubuntu 20.04 LTS
+hademo2                 Running           192.168.64.17    Ubuntu 20.04 LTS
+hademo3                 Running           192.168.64.18    Ubuntu 20.04 LTS
+hademo4                 Running           192.168.64.19    Ubuntu 20.04 LTS
+...uninitialized nodes successfully created!
+-> Executing initialize_K3s_masters...
+Initialize K3s master on node1...
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [391 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [88.9 kB]
+Get:8 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [5524 B]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [80.6 kB]
+Get:10 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [12.8 kB]
+Get:11 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [519 kB]
+Get:12 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [68.0 kB]
+Get:13 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [9364 B]
+Get:14 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [1256 B]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [540 B]
+Get:16 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [116 B]
+Get:17 http://archive.ubuntu.com/ubuntu focal/universe Translation-en [5124 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f Metadata [265 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [144 kB]
+Get:20 http://archive.ubuntu.com/ubuntu focal/multiverse Translation-en [104 kB]
+Get:21 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
+Get:22 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [691 kB]
+Get:23 http://archive.ubuntu.com/ubuntu focal-updates/main Translation-en [171 kB]
+Get:24 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [11.2 kB]
+Get:25 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [103 kB]
+Get:26 http://archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [15.8 kB]
+Get:27 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [700 kB]
+Get:28 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [137 kB]
+Get:29 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [13.4 kB]
+Get:30 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [19.9 kB]
+Get:31 http://archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [4668 B]
+Get:32 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [552 B]
+Get:33 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [112 B]
+Get:34 http://archive.ubuntu.com/ubuntu focal-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:35 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [3988 B]
+Get:36 http://archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [1448 B]
+Get:37 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [224 B]
+Get:38 http://archive.ubuntu.com/ubuntu focal-backports/multiverse amd64 c-n-f Metadata [116 B]
+Fetched 17.6 MB in 16s (1128 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ca-certificates is already the newest version (20201027ubuntu0.20.04.1).
+ca-certificates set to manually installed.
+curl is already the newest version (7.68.0-1ubuntu2.2).
+curl set to manually installed.
+software-properties-common is already the newest version (0.98.9.3).
+software-properties-common set to manually installed.
+The following NEW packages will be installed:
+  apt-transport-https
+0 upgraded, 1 newly installed, 0 to remove and 3 not upgraded.
+Need to get 1708 B of archives.
+After this operation, 160 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 apt-transport-https all 2.0.2ubuntu0.1 [1708 B]
+Fetched 1708 B in 0s (5807 B/s)
+Selecting previously unselected package apt-transport-https.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 63406 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_2.0.2ubuntu0.1_all.deb ...
+Unpacking apt-transport-https (2.0.2ubuntu0.1) ...
+Setting up apt-transport-https (2.0.2ubuntu0.1) ...
+OK
+Hit:1 http://security.ubuntu.com/ubuntu focal-security InRelease
+Get:2 https://download.docker.com/linux/ubuntu focal InRelease [36.2 kB]
+Hit:3 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:4 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages [4226 B]
+Hit:5 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Fetched 40.4 kB in 1s (60.7 kB/s)
+Reading package lists...
+Hit:1 https://download.docker.com/linux/ubuntu focal InRelease
+Hit:2 http://security.ubuntu.com/ubuntu focal-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  aufs-tools cgroupfs-mount containerd.io pigz
+The following NEW packages will be installed:
+  aufs-tools cgroupfs-mount containerd.io docker-ce docker-ce-cli pigz
+0 upgraded, 6 newly installed, 0 to remove and 3 not upgraded.
+Need to get 91.3 MB of archives.
+After this operation, 410 MB of additional disk space will be used.
+Get:1 https://download.docker.com/linux/ubuntu focal/stable amd64 containerd.io amd64 1.3.9-1 [24.4 MB]
+Get:2 http://archive.ubuntu.com/ubuntu focal/universe amd64 pigz amd64 2.4-1 [57.4 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal/universe amd64 aufs-tools amd64 1:4.14+20190211-1ubuntu1 [104 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal/universe amd64 cgroupfs-mount all 1.4 [6320 B]
+Get:5 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce-cli amd64 5:19.03.13~3-0~ubuntu-focal [44.2 MB]
+Get:6 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce amd64 5:19.03.13~3-0~ubuntu-focal [22.6 MB]
+Fetched 91.3 MB in 60s (1510 kB/s)
+Selecting previously unselected package pigz.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 63410 files and directories currently installed.)
+Preparing to unpack .../0-pigz_2.4-1_amd64.deb ...
+Unpacking pigz (2.4-1) ...
+Selecting previously unselected package aufs-tools.
+Preparing to unpack .../1-aufs-tools_1%3a4.14+20190211-1ubuntu1_amd64.deb ...
+Unpacking aufs-tools (1:4.14+20190211-1ubuntu1) ...
+Selecting previously unselected package cgroupfs-mount.
+Preparing to unpack .../2-cgroupfs-mount_1.4_all.deb ...
+Unpacking cgroupfs-mount (1.4) ...
+Selecting previously unselected package containerd.io.
+Preparing to unpack .../3-containerd.io_1.3.9-1_amd64.deb ...
+Unpacking containerd.io (1.3.9-1) ...
+Selecting previously unselected package docker-ce-cli.
+Preparing to unpack .../4-docker-ce-cli_5%3a19.03.13~3-0~ubuntu-focal_amd64.deb ...
+Unpacking docker-ce-cli (5:19.03.13~3-0~ubuntu-focal) ...
+Selecting previously unselected package docker-ce.
+Preparing to unpack .../5-docker-ce_5%3a19.03.13~3-0~ubuntu-focal_amd64.deb ...
+Unpacking docker-ce (5:19.03.13~3-0~ubuntu-focal) ...
+Setting up aufs-tools (1:4.14+20190211-1ubuntu1) ...
+Setting up containerd.io (1.3.9-1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Setting up docker-ce-cli (5:19.03.13~3-0~ubuntu-focal) ...
+Setting up pigz (2.4-1) ...
+Setting up cgroupfs-mount (1.4) ...
+Setting up docker-ce (5:19.03.13~3-0~ubuntu-focal) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+Processing triggers for systemd (245.4-4ubuntu3.3) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.1) ...
+Client: Docker Engine - Community
+ Version:           19.03.13
+ API version:       1.40
+ Go version:        go1.13.15
+ Git commit:        4484c46d9d
+ Built:             Wed Sep 16 17:02:52 2020
+ OS/Arch:           linux/amd64
+ Experimental:      false
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          19.03.13
+  API version:      1.40 (minimum version 1.12)
+  Go version:       go1.13.15
+  Git commit:       4484c46d9d
+  Built:            Wed Sep 16 17:01:20 2020
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.3.9
+  GitCommit:        ea765aba0d05254012b0b9e595e995c09186427f
+ runc:
+  Version:          1.0.0-rc10
+  GitCommit:        dc9208a3303feef5b3839f4323d9beb36df0a9dd
+ docker-init:
+  Version:          0.18.0
+  GitCommit:        fec3683
+
+If you would like to use Docker as a non-root user, you should now consider
+adding your user to the "docker" group with something like:
+
+  sudo usermod -aG docker ubuntu
+
+Remember that you will have to log out and back in for this to take effect!
+
+WARNING: Adding a user to the "docker" group will grant the ability to run
+         containers which can be used to obtain root privileges on the
+         docker host.
+         Refer to https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface
+         for more information.
+
+[INFO]  Finding release for channel stable
+[INFO]  Using v1.19.4+k3s1 as release
+[INFO]  Downloading hash https://github.com/rancher/k3s/releases/download/v1.19.4+k3s1/sha256sum-amd64.txt
+[INFO]  Downloading binary https://github.com/rancher/k3s/releases/download/v1.19.4+k3s1/k3s
+[INFO]  Verifying binary download
+[INFO]  Installing k3s to /usr/local/bin/k3s
+[INFO]  Creating /usr/local/bin/kubectl symlink to k3s
+[INFO]  Creating /usr/local/bin/crictl symlink to k3s
+[INFO]  Skipping /usr/local/bin/ctr symlink to k3s, command exists in PATH at /usr/bin/ctr
+[INFO]  Creating killall script /usr/local/bin/k3s-killall.sh
+[INFO]  Creating uninstall script /usr/local/bin/k3s-uninstall.sh
+[INFO]  env: Creating environment file /etc/systemd/system/k3s.service.env
+[INFO]  systemd: Creating service file /etc/systemd/system/k3s.service
+[INFO]  systemd: Enabling k3s unit
+[INFO]  systemd: Starting k3s
+Node1 initialized...
+Initialize K3s master on node2...
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [391 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [88.9 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [5524 B]
+Get:8 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [80.6 kB]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [12.8 kB]
+Get:10 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [519 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:12 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [68.0 kB]
+Get:13 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [9364 B]
+Get:14 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [1256 B]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [540 B]
+Get:16 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [116 B]
+Get:17 http://archive.ubuntu.com/ubuntu focal/universe Translation-en [5124 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f Metadata [265 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [144 kB]
+Get:20 http://archive.ubuntu.com/ubuntu focal/multiverse Translation-en [104 kB]
+Get:21 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
+Get:22 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [691 kB]
+Get:23 http://archive.ubuntu.com/ubuntu focal-updates/main Translation-en [171 kB]
+Get:24 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [11.2 kB]
+Get:25 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [103 kB]
+Get:26 http://archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [15.8 kB]
+Get:27 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [700 kB]
+Get:28 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [137 kB]
+Get:29 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [13.4 kB]
+Get:30 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [19.9 kB]
+Get:31 http://archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [4668 B]
+Get:32 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [552 B]
+Get:33 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [112 B]
+Get:34 http://archive.ubuntu.com/ubuntu focal-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:35 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [3988 B]
+Get:36 http://archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [1448 B]
+Get:37 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [224 B]
+Get:38 http://archive.ubuntu.com/ubuntu focal-backports/multiverse amd64 c-n-f Metadata [116 B]
+Fetched 17.6 MB in 14s (1288 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ca-certificates is already the newest version (20201027ubuntu0.20.04.1).
+ca-certificates set to manually installed.
+curl is already the newest version (7.68.0-1ubuntu2.2).
+curl set to manually installed.
+software-properties-common is already the newest version (0.98.9.3).
+software-properties-common set to manually installed.
+The following NEW packages will be installed:
+  apt-transport-https
+0 upgraded, 1 newly installed, 0 to remove and 3 not upgraded.
+Need to get 1708 B of archives.
+After this operation, 160 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 apt-transport-https all 2.0.2ubuntu0.1 [1708 B]
+Fetched 1708 B in 1s (3257 B/s)
+Selecting previously unselected package apt-transport-https.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 63406 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_2.0.2ubuntu0.1_all.deb ...
+Unpacking apt-transport-https (2.0.2ubuntu0.1) ...
+Setting up apt-transport-https (2.0.2ubuntu0.1) ...
+OK
+Hit:1 http://security.ubuntu.com/ubuntu focal-security InRelease
+Get:2 https://download.docker.com/linux/ubuntu focal InRelease [36.2 kB]
+Hit:3 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Get:5 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages [4226 B]
+Hit:6 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Fetched 40.4 kB in 1s (56.1 kB/s)
+Reading package lists...
+Hit:1 https://download.docker.com/linux/ubuntu focal InRelease
+Hit:2 http://security.ubuntu.com/ubuntu focal-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  aufs-tools cgroupfs-mount containerd.io pigz
+The following NEW packages will be installed:
+  aufs-tools cgroupfs-mount containerd.io docker-ce docker-ce-cli pigz
+0 upgraded, 6 newly installed, 0 to remove and 3 not upgraded.
+Need to get 91.3 MB of archives.
+After this operation, 410 MB of additional disk space will be used.
+Get:1 https://download.docker.com/linux/ubuntu focal/stable amd64 containerd.io amd64 1.3.9-1 [24.4 MB]
+Get:2 http://archive.ubuntu.com/ubuntu focal/universe amd64 pigz amd64 2.4-1 [57.4 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal/universe amd64 aufs-tools amd64 1:4.14+20190211-1ubuntu1 [104 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal/universe amd64 cgroupfs-mount all 1.4 [6320 B]
+Get:5 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce-cli amd64 5:19.03.13~3-0~ubuntu-focal [44.2 MB]
+Get:6 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce amd64 5:19.03.13~3-0~ubuntu-focal [22.6 MB]
+Fetched 91.3 MB in 1min 27s (1049 kB/s)
+Selecting previously unselected package pigz.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 63410 files and directories currently installed.)
+Preparing to unpack .../0-pigz_2.4-1_amd64.deb ...
+Unpacking pigz (2.4-1) ...
+Selecting previously unselected package aufs-tools.
+Preparing to unpack .../1-aufs-tools_1%3a4.14+20190211-1ubuntu1_amd64.deb ...
+Unpacking aufs-tools (1:4.14+20190211-1ubuntu1) ...
+Selecting previously unselected package cgroupfs-mount.
+Preparing to unpack .../2-cgroupfs-mount_1.4_all.deb ...
+Unpacking cgroupfs-mount (1.4) ...
+Selecting previously unselected package containerd.io.
+Preparing to unpack .../3-containerd.io_1.3.9-1_amd64.deb ...
+Unpacking containerd.io (1.3.9-1) ...
+Selecting previously unselected package docker-ce-cli.
+Preparing to unpack .../4-docker-ce-cli_5%3a19.03.13~3-0~ubuntu-focal_amd64.deb ...
+Unpacking docker-ce-cli (5:19.03.13~3-0~ubuntu-focal) ...
+Selecting previously unselected package docker-ce.
+Preparing to unpack .../5-docker-ce_5%3a19.03.13~3-0~ubuntu-focal_amd64.deb ...
+Unpacking docker-ce (5:19.03.13~3-0~ubuntu-focal) ...
+Setting up aufs-tools (1:4.14+20190211-1ubuntu1) ...
+Setting up containerd.io (1.3.9-1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Setting up docker-ce-cli (5:19.03.13~3-0~ubuntu-focal) ...
+Setting up pigz (2.4-1) ...
+Setting up cgroupfs-mount (1.4) ...
+Setting up docker-ce (5:19.03.13~3-0~ubuntu-focal) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+Processing triggers for systemd (245.4-4ubuntu3.3) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.1) ...
+Client: Docker Engine - Community
+ Version:           19.03.13
+ API version:       1.40
+ Go version:        go1.13.15
+ Git commit:        4484c46d9d
+ Built:             Wed Sep 16 17:02:52 2020
+ OS/Arch:           linux/amd64
+ Experimental:      false
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          19.03.13
+  API version:      1.40 (minimum version 1.12)
+  Go version:       go1.13.15
+  Git commit:       4484c46d9d
+  Built:            Wed Sep 16 17:01:20 2020
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.3.9
+  GitCommit:        ea765aba0d05254012b0b9e595e995c09186427f
+ runc:
+  Version:          1.0.0-rc10
+  GitCommit:        dc9208a3303feef5b3839f4323d9beb36df0a9dd
+ docker-init:
+  Version:          0.18.0
+  GitCommit:        fec3683
+
+If you would like to use Docker as a non-root user, you should now consider
+adding your user to the "docker" group with something like:
+
+  sudo usermod -aG docker ubuntu
+
+Remember that you will have to log out and back in for this to take effect!
+
+WARNING: Adding a user to the "docker" group will grant the ability to run
+         containers which can be used to obtain root privileges on the
+         docker host.
+         Refer to https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface
+         for more information.
+
+[INFO]  Finding release for channel stable
+[INFO]  Using v1.19.4+k3s1 as release
+[INFO]  Downloading hash https://github.com/rancher/k3s/releases/download/v1.19.4+k3s1/sha256sum-amd64.txt
+[INFO]  Downloading binary https://github.com/rancher/k3s/releases/download/v1.19.4+k3s1/k3s
+[INFO]  Verifying binary download
+[INFO]  Installing k3s to /usr/local/bin/k3s
+[INFO]  Creating /usr/local/bin/kubectl symlink to k3s
+[INFO]  Creating /usr/local/bin/crictl symlink to k3s
+[INFO]  Skipping /usr/local/bin/ctr symlink to k3s, command exists in PATH at /usr/bin/ctr
+[INFO]  Creating killall script /usr/local/bin/k3s-killall.sh
+[INFO]  Creating uninstall script /usr/local/bin/k3s-uninstall.sh
+[INFO]  env: Creating environment file /etc/systemd/system/k3s.service.env
+[INFO]  systemd: Creating service file /etc/systemd/system/k3s.service
+[INFO]  systemd: Enabling k3s unit
+[INFO]  systemd: Starting k3s
+Node2 master initialized...
+Initialize K3s master on node3...
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [391 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [88.9 kB]
+Get:8 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [5524 B]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [80.6 kB]
+Get:10 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [12.8 kB]
+Get:11 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [519 kB]
+Get:12 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [68.0 kB]
+Get:13 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [9364 B]
+Get:14 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [1256 B]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [540 B]
+Get:16 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [116 B]
+Get:17 http://archive.ubuntu.com/ubuntu focal/universe Translation-en [5124 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f Metadata [265 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [144 kB]
+Get:20 http://archive.ubuntu.com/ubuntu focal/multiverse Translation-en [104 kB]
+Get:21 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
+Get:22 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [691 kB]
+Get:23 http://archive.ubuntu.com/ubuntu focal-updates/main Translation-en [171 kB]
+Get:24 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [11.2 kB]
+Get:25 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [103 kB]
+Get:26 http://archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [15.8 kB]
+Get:27 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [700 kB]
+Get:28 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [137 kB]
+Get:29 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [13.4 kB]
+Get:30 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [19.9 kB]
+Get:31 http://archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [4668 B]
+Get:32 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [552 B]
+Get:33 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [112 B]
+Get:34 http://archive.ubuntu.com/ubuntu focal-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:35 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [3988 B]
+Get:36 http://archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [1448 B]
+Get:37 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [224 B]
+Get:38 http://archive.ubuntu.com/ubuntu focal-backports/multiverse amd64 c-n-f Metadata [116 B]
+Fetched 17.6 MB in 12s (1487 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ca-certificates is already the newest version (20201027ubuntu0.20.04.1).
+ca-certificates set to manually installed.
+curl is already the newest version (7.68.0-1ubuntu2.2).
+curl set to manually installed.
+software-properties-common is already the newest version (0.98.9.3).
+software-properties-common set to manually installed.
+The following NEW packages will be installed:
+  apt-transport-https
+0 upgraded, 1 newly installed, 0 to remove and 3 not upgraded.
+Need to get 1708 B of archives.
+After this operation, 160 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 apt-transport-https all 2.0.2ubuntu0.1 [1708 B]
+Fetched 1708 B in 0s (6084 B/s)
+Selecting previously unselected package apt-transport-https.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 63406 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_2.0.2ubuntu0.1_all.deb ...
+Unpacking apt-transport-https (2.0.2ubuntu0.1) ...
+Setting up apt-transport-https (2.0.2ubuntu0.1) ...
+OK
+Get:1 https://download.docker.com/linux/ubuntu focal InRelease [36.2 kB]
+Hit:2 http://security.ubuntu.com/ubuntu focal-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:4 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages [4226 B]
+Hit:5 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Fetched 40.4 kB in 1s (38.8 kB/s)
+Reading package lists...
+Hit:1 https://download.docker.com/linux/ubuntu focal InRelease
+Hit:2 http://security.ubuntu.com/ubuntu focal-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  aufs-tools cgroupfs-mount containerd.io pigz
+The following NEW packages will be installed:
+  aufs-tools cgroupfs-mount containerd.io docker-ce docker-ce-cli pigz
+0 upgraded, 6 newly installed, 0 to remove and 3 not upgraded.
+Need to get 91.3 MB of archives.
+After this operation, 410 MB of additional disk space will be used.
+Get:1 https://download.docker.com/linux/ubuntu focal/stable amd64 containerd.io amd64 1.3.9-1 [24.4 MB]
+Get:2 http://archive.ubuntu.com/ubuntu focal/universe amd64 pigz amd64 2.4-1 [57.4 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal/universe amd64 aufs-tools amd64 1:4.14+20190211-1ubuntu1 [104 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal/universe amd64 cgroupfs-mount all 1.4 [6320 B]
+Get:5 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce-cli amd64 5:19.03.13~3-0~ubuntu-focal [44.2 MB]
+Get:6 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce amd64 5:19.03.13~3-0~ubuntu-focal [22.6 MB]
+Fetched 91.3 MB in 1min 1s (1508 kB/s)
+Selecting previously unselected package pigz.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 63410 files and directories currently installed.)
+Preparing to unpack .../0-pigz_2.4-1_amd64.deb ...
+Unpacking pigz (2.4-1) ...
+Selecting previously unselected package aufs-tools.
+Preparing to unpack .../1-aufs-tools_1%3a4.14+20190211-1ubuntu1_amd64.deb ...
+Unpacking aufs-tools (1:4.14+20190211-1ubuntu1) ...
+Selecting previously unselected package cgroupfs-mount.
+Preparing to unpack .../2-cgroupfs-mount_1.4_all.deb ...
+Unpacking cgroupfs-mount (1.4) ...
+Selecting previously unselected package containerd.io.
+Preparing to unpack .../3-containerd.io_1.3.9-1_amd64.deb ...
+Unpacking containerd.io (1.3.9-1) ...
+Selecting previously unselected package docker-ce-cli.
+Preparing to unpack .../4-docker-ce-cli_5%3a19.03.13~3-0~ubuntu-focal_amd64.deb ...
+Unpacking docker-ce-cli (5:19.03.13~3-0~ubuntu-focal) ...
+Selecting previously unselected package docker-ce.
+Preparing to unpack .../5-docker-ce_5%3a19.03.13~3-0~ubuntu-focal_amd64.deb ...
+Unpacking docker-ce (5:19.03.13~3-0~ubuntu-focal) ...
+Setting up aufs-tools (1:4.14+20190211-1ubuntu1) ...
+Setting up containerd.io (1.3.9-1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Setting up docker-ce-cli (5:19.03.13~3-0~ubuntu-focal) ...
+Setting up pigz (2.4-1) ...
+Setting up cgroupfs-mount (1.4) ...
+Setting up docker-ce (5:19.03.13~3-0~ubuntu-focal) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+Processing triggers for systemd (245.4-4ubuntu3.3) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.1) ...
+Client: Docker Engine - Community
+ Version:           19.03.13
+ API version:       1.40
+ Go version:        go1.13.15
+ Git commit:        4484c46d9d
+ Built:             Wed Sep 16 17:02:52 2020
+ OS/Arch:           linux/amd64
+ Experimental:      false
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          19.03.13
+  API version:      1.40 (minimum version 1.12)
+  Go version:       go1.13.15
+  Git commit:       4484c46d9d
+  Built:            Wed Sep 16 17:01:20 2020
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.3.9
+  GitCommit:        ea765aba0d05254012b0b9e595e995c09186427f
+ runc:
+  Version:          1.0.0-rc10
+  GitCommit:        dc9208a3303feef5b3839f4323d9beb36df0a9dd
+ docker-init:
+  Version:          0.18.0
+  GitCommit:        fec3683
+
+If you would like to use Docker as a non-root user, you should now consider
+adding your user to the "docker" group with something like:
+
+  sudo usermod -aG docker ubuntu
+
+Remember that you will have to log out and back in for this to take effect!
+
+WARNING: Adding a user to the "docker" group will grant the ability to run
+         containers which can be used to obtain root privileges on the
+         docker host.
+         Refer to https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface
+         for more information.
+
+[INFO]  Finding release for channel stable
+[INFO]  Using v1.19.4+k3s1 as release
+[INFO]  Downloading hash https://github.com/rancher/k3s/releases/download/v1.19.4+k3s1/sha256sum-amd64.txt
+[INFO]  Downloading binary https://github.com/rancher/k3s/releases/download/v1.19.4+k3s1/k3s
+[INFO]  Verifying binary download
+[INFO]  Installing k3s to /usr/local/bin/k3s
+[INFO]  Creating /usr/local/bin/kubectl symlink to k3s
+[INFO]  Creating /usr/local/bin/crictl symlink to k3s
+[INFO]  Skipping /usr/local/bin/ctr symlink to k3s, command exists in PATH at /usr/bin/ctr
+[INFO]  Creating killall script /usr/local/bin/k3s-killall.sh
+[INFO]  Creating uninstall script /usr/local/bin/k3s-uninstall.sh
+[INFO]  env: Creating environment file /etc/systemd/system/k3s.service.env
+[INFO]  systemd: Creating service file /etc/systemd/system/k3s.service
+[INFO]  systemd: Enabling k3s unit
+[INFO]  systemd: Starting k3s
+Node3 master initialized...
+NAME      STATUS   ROLES         AGE    VERSION
+hademo1   Ready    etcd,master   8m2s   v1.19.4+k3s1
+hademo2   Ready    etcd,master   4m8s   v1.19.4+k3s1
+hademo3   Ready    etcd,master   20s    v1.19.4+k3s1
+3 master nodes for multi-master K3s cluster is successfully initialized...
+-> Executing initialize_K3s_agents...
+Initializing agent node4 to cluster...
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [391 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [88.9 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [5524 B]
+Get:8 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [80.6 kB]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [12.8 kB]
+Get:10 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [519 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+Get:12 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [68.0 kB]
+Get:13 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [9364 B]
+Get:14 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [1256 B]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [540 B]
+Get:16 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [116 B]
+Get:17 http://archive.ubuntu.com/ubuntu focal/universe Translation-en [5124 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f Metadata [265 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [144 kB]
+Get:20 http://archive.ubuntu.com/ubuntu focal/multiverse Translation-en [104 kB]
+Get:21 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
+Get:22 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [691 kB]
+Get:23 http://archive.ubuntu.com/ubuntu focal-updates/main Translation-en [171 kB]
+Get:24 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [11.2 kB]
+Get:25 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [103 kB]
+Get:26 http://archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [15.8 kB]
+Get:27 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [700 kB]
+Get:28 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [137 kB]
+Get:29 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [13.4 kB]
+Get:30 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [19.9 kB]
+Get:31 http://archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [4668 B]
+Get:32 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [552 B]
+Get:33 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [112 B]
+Get:34 http://archive.ubuntu.com/ubuntu focal-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:35 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [3988 B]
+Get:36 http://archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [1448 B]
+Get:37 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [224 B]
+Get:38 http://archive.ubuntu.com/ubuntu focal-backports/multiverse amd64 c-n-f Metadata [116 B]
+Fetched 17.6 MB in 16s (1133 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ca-certificates is already the newest version (20201027ubuntu0.20.04.1).
+ca-certificates set to manually installed.
+curl is already the newest version (7.68.0-1ubuntu2.2).
+curl set to manually installed.
+software-properties-common is already the newest version (0.98.9.3).
+software-properties-common set to manually installed.
+The following NEW packages will be installed:
+  apt-transport-https
+0 upgraded, 1 newly installed, 0 to remove and 3 not upgraded.
+Need to get 1708 B of archives.
+After this operation, 160 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 apt-transport-https all 2.0.2ubuntu0.1 [1708 B]
+Fetched 1708 B in 0s (5002 B/s)
+Selecting previously unselected package apt-transport-https.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 63406 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_2.0.2ubuntu0.1_all.deb ...
+Unpacking apt-transport-https (2.0.2ubuntu0.1) ...
+Setting up apt-transport-https (2.0.2ubuntu0.1) ...
+OK
+Get:1 https://download.docker.com/linux/ubuntu focal InRelease [36.2 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:3 http://security.ubuntu.com/ubuntu focal-security InRelease
+Get:4 https://download.docker.com/linux/ubuntu focal/stable amd64 Packages [4226 B]
+Hit:5 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Fetched 40.4 kB in 1s (40.2 kB/s)
+Reading package lists...
+Hit:1 http://security.ubuntu.com/ubuntu focal-security InRelease
+Hit:2 https://download.docker.com/linux/ubuntu focal InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  aufs-tools cgroupfs-mount containerd.io pigz
+The following NEW packages will be installed:
+  aufs-tools cgroupfs-mount containerd.io docker-ce docker-ce-cli pigz
+0 upgraded, 6 newly installed, 0 to remove and 3 not upgraded.
+Need to get 91.3 MB of archives.
+After this operation, 410 MB of additional disk space will be used.
+Get:1 https://download.docker.com/linux/ubuntu focal/stable amd64 containerd.io amd64 1.3.9-1 [24.4 MB]
+Get:2 http://archive.ubuntu.com/ubuntu focal/universe amd64 pigz amd64 2.4-1 [57.4 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal/universe amd64 aufs-tools amd64 1:4.14+20190211-1ubuntu1 [104 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal/universe amd64 cgroupfs-mount all 1.4 [6320 B]
+Get:5 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce-cli amd64 5:19.03.13~3-0~ubuntu-focal [44.2 MB]
+Get:6 https://download.docker.com/linux/ubuntu focal/stable amd64 docker-ce amd64 5:19.03.13~3-0~ubuntu-focal [22.6 MB]
+Fetched 91.3 MB in 1min 8s (1349 kB/s)
+Selecting previously unselected package pigz.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 63410 files and directories currently installed.)
+Preparing to unpack .../0-pigz_2.4-1_amd64.deb ...
+Unpacking pigz (2.4-1) ...
+Selecting previously unselected package aufs-tools.
+Preparing to unpack .../1-aufs-tools_1%3a4.14+20190211-1ubuntu1_amd64.deb ...
+Unpacking aufs-tools (1:4.14+20190211-1ubuntu1) ...
+Selecting previously unselected package cgroupfs-mount.
+Preparing to unpack .../2-cgroupfs-mount_1.4_all.deb ...
+Unpacking cgroupfs-mount (1.4) ...
+Selecting previously unselected package containerd.io.
+Preparing to unpack .../3-containerd.io_1.3.9-1_amd64.deb ...
+Unpacking containerd.io (1.3.9-1) ...
+Selecting previously unselected package docker-ce-cli.
+Preparing to unpack .../4-docker-ce-cli_5%3a19.03.13~3-0~ubuntu-focal_amd64.deb ...
+Unpacking docker-ce-cli (5:19.03.13~3-0~ubuntu-focal) ...
+Selecting previously unselected package docker-ce.
+Preparing to unpack .../5-docker-ce_5%3a19.03.13~3-0~ubuntu-focal_amd64.deb ...
+Unpacking docker-ce (5:19.03.13~3-0~ubuntu-focal) ...
+Setting up aufs-tools (1:4.14+20190211-1ubuntu1) ...
+Setting up containerd.io (1.3.9-1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /lib/systemd/system/containerd.service.
+Setting up docker-ce-cli (5:19.03.13~3-0~ubuntu-focal) ...
+Setting up pigz (2.4-1) ...
+Setting up cgroupfs-mount (1.4) ...
+Setting up docker-ce (5:19.03.13~3-0~ubuntu-focal) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
+Processing triggers for systemd (245.4-4ubuntu3.3) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.1) ...
+Client: Docker Engine - Community
+ Version:           19.03.13
+ API version:       1.40
+ Go version:        go1.13.15
+ Git commit:        4484c46d9d
+ Built:             Wed Sep 16 17:02:52 2020
+ OS/Arch:           linux/amd64
+ Experimental:      false
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          19.03.13
+  API version:      1.40 (minimum version 1.12)
+  Go version:       go1.13.15
+  Git commit:       4484c46d9d
+  Built:            Wed Sep 16 17:01:20 2020
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.3.9
+  GitCommit:        ea765aba0d05254012b0b9e595e995c09186427f
+ runc:
+  Version:          1.0.0-rc10
+  GitCommit:        dc9208a3303feef5b3839f4323d9beb36df0a9dd
+ docker-init:
+  Version:          0.18.0
+  GitCommit:        fec3683
+
+If you would like to use Docker as a non-root user, you should now consider
+adding your user to the "docker" group with something like:
+
+  sudo usermod -aG docker ubuntu
+
+Remember that you will have to log out and back in for this to take effect!
+
+WARNING: Adding a user to the "docker" group will grant the ability to run
+         containers which can be used to obtain root privileges on the
+         docker host.
+         Refer to https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface
+         for more information.
+
+[INFO]  Finding release for channel stable
+[INFO]  Using v1.19.4+k3s1 as release
+[INFO]  Downloading hash https://github.com/rancher/k3s/releases/download/v1.19.4+k3s1/sha256sum-amd64.txt
+[INFO]  Downloading binary https://github.com/rancher/k3s/releases/download/v1.19.4+k3s1/k3s
+[INFO]  Verifying binary download
+[INFO]  Installing k3s to /usr/local/bin/k3s
+[INFO]  Creating /usr/local/bin/kubectl symlink to k3s
+[INFO]  Creating /usr/local/bin/crictl symlink to k3s
+[INFO]  Skipping /usr/local/bin/ctr symlink to k3s, command exists in PATH at /usr/bin/ctr
+[INFO]  Creating killall script /usr/local/bin/k3s-killall.sh
+[INFO]  Creating uninstall script /usr/local/bin/k3s-agent-uninstall.sh
+[INFO]  env: Creating environment file /etc/systemd/system/k3s-agent.service.env
+[INFO]  systemd: Creating service file /etc/systemd/system/k3s-agent.service
+[INFO]  systemd: Enabling k3s-agent unit
+[INFO]  systemd: Starting k3s-agent
+Node hademo4 initialized...
+NAME      STATUS   ROLES         AGE     VERSION
+hademo1   Ready    etcd,master   11m     v1.19.4+k3s1
+hademo2   Ready    etcd,master   7m43s   v1.19.4+k3s1
+hademo3   Ready    etcd,master   3m55s   v1.19.4+k3s1
+hademo4   Ready    <none>        14s     v1.19.4+k3s1
+Multi-master K3s cluster with  agents nodes successfully initialized...
+-> Executing configure_kubeconfig...
+******************************************************* 
+                  Name : hademo
+       Number of Nodes : 4 
+******************************************************* 
+ 
+------------------------------------------------------- 
+-> Processing request to build hademo **** 
+Cluster hademo is created successfully.
